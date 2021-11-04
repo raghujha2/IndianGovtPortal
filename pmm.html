@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Quiz</title>
+<link href="style.css" rel="stylesheet">
+<script>
+function check(){
+
+
+var question1 = document.quiz.question1.value;
+var question2 = document.quiz.question2.value;
+var question3 = document.quiz.question3.value;
+var correct = 0;
+
+if (question1 == "brazzaville"){
+    correct++;
+}
+if (question2 == "Rabat") {
+    correct++;
+}
+if (question3 == "bangui") {
+    correct++
+}  
+var messages = ["Yes you are eligible! for more details <a href='https://www.bajajfinserv.in/what-are-the-eligibility-criteria-for-mudra-loan'>abs</a>", "No you are not eligible! "];
+var range;
+
+ if (correct == 3){
+      range = 0;
+ }
+else{
+    range = 1;
+}
+
+
+document.getElementById("after_submit").style.visibility="visible";
+
+
+document.getElementById("message").innerHTML = messages[range];
+document.getElementById("number_correct").innerHTML = "you got " + correct + " correct.";
+
+}
+
+// reflesh page function
+
+function myFunction() {
+location.reload();
+}
+</script>
+</head>
+<body>
+    <div class="Nav">
+        <ul>
+          <li><a class="active" href="index.html">Login</a></li>
+          <li><a href="signup.php">Sign Up</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <p id="Ptag">IndianGovtPortal</p>
+        </ul>
+            </div>
+            <h2 class="card-title">Pradhan Mantri Mudra Yojna (PMMY)</h2>
+<form id="quiz" name="quiz">
+	
+	<p>Do you belongs to age 18 to 59? </p>
+	
+    <input type="radio" id="mc" name="question1" value="brazzaville">Yes<br>
+    <input type="radio" id="mc" name="question1" value="kinshasa">No<br>
+
+	<p>Do you have following business? small manufacture, artisans, fruits and vegitables seller, shopkeeper etc. </p>
+
+    <input type="radio" id="mc" name="question2" value="Rabat">yes<br>
+    <input type="radio" id="mc" name="question2" value="Johannesburg">no<br>
+
+
+    `<p>do you have address proof?</p>
+
+    <input type="radio" id="mc" name="question3" value="bangui">Yes<br>
+    <input type="radio" id="mc" name="question3" value="bandundu">No<br>
+</br>
+<input id="button" type="button" value="I'm finished!" onclick="check();">
+
+</form>
+
+<div id="after_submit">
+	<p id="message"></p>
+<p id="number_correct"></p>
+</div>
+
+<button onclick="myFunction()">Restart</button>
+
+        <footer id="Ft">
+            @2020 made by Raghunandan Jha
+        </footer>
+
+</body>
+</html>

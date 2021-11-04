@@ -1,0 +1,61 @@
+<html>  
+<head>  
+    <title>IndianGovtPortal</title>  
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+</head>  
+<body>  
+    <div class="Nav">
+<ul>
+  <li><a class="active" href="index.html">Login</a></li>
+  <li><a href="signup.php">Sign Up</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+  <p id="Ptag">IndianGovtPortal</p>
+</ul>
+    </div>
+    <div id = "frm">  
+        <h1 id="Lg">Login</h1>  
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label id="Lg"> Username: </label>  
+                <input type = "text" id ="user" name  = "user" placeholder="Enter the username "/>  
+            </p>  
+            <p>  
+                <label id="Lg"> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" placeholder="Enter the password "/>  
+            </p>  
+            <p >     
+                <input type =  "submit" id="bty" value = "Login" />  <Br><Br>
+                <a href="signup.php" id="dha">              Don't have an Account?</a>
+            </p>  
+        </form>  
+    </div>  
+      
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+        <footer id="Ft">
+            @2020 made by Raghunandan Jha
+        </footer>
+</body>     
+</html>  
